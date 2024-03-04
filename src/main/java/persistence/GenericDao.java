@@ -8,12 +8,6 @@ public class GenericDao
 {
 	private Connection c;
 
-    /**
-     * Obtém uma conexão com o banco de dados.
-     *
-     * @return Objeto Connection representando a conexão com o banco de dados.
-     * @throws SQLException Exceção lançada em caso de falha na obtenção da conexão.
-     */
     public Connection getConnection() throws SQLException
     {
         String hostName = "localhost";
