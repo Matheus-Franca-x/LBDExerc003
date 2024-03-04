@@ -18,25 +18,25 @@ public class ViagemDao implements ICrud<Viagem>
 	}
 
 	@Override
-	public void cadastrar() throws SQLException, ClassNotFoundException 
+	public void cadastrar(Viagem v) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public void alterar() throws SQLException, ClassNotFoundException 
+	public void alterar(Viagem v) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public void excluir() throws SQLException, ClassNotFoundException 
+	public void excluir(Viagem v) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public Viagem consultar() throws SQLException, ClassNotFoundException 
+	public Viagem consultar(Viagem v) throws SQLException, ClassNotFoundException 
 	{
 		return null;
 	}

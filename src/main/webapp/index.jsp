@@ -29,16 +29,13 @@
 							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./'">home</button>
 						</div>
 						<div class="col-auto p-0 text-center" style="width: 100px;">
-							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./curso'">curso</button>
+							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./motorista'">motorista</button>
 						</div>
 						<div class="col-auto p-0 text-center" style="width: 100px;">
-							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./aluno'">aluno</button>
+							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./onibus'">onibus</button>
 						</div>
 						<div class="col-auto p-0 text-center" style="width: 100px;">
-							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./disciplina'">disciplina</button>
-						</div>
-						<div class="col-auto p-0 text-center" style="width: 100px;">
-							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./professor'">professor</button>
+							<button class="btn btn-outline-primary" style="width: 93px" OnClick="window.location.href='./viagem'">viagem</button>
 						</div>
 					</div>
 				</div>

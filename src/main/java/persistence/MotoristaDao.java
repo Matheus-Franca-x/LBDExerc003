@@ -14,25 +14,25 @@ public class MotoristaDao implements ICrud<Motorista>
 	}
 
 	@Override
-	public void cadastrar() throws SQLException, ClassNotFoundException 
+	public void cadastrar(Motorista m) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public void alterar() throws SQLException, ClassNotFoundException 
+	public void alterar(Motorista m) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public void excluir() throws SQLException, ClassNotFoundException 
+	public void excluir(Motorista m) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public Motorista consultar() throws SQLException, ClassNotFoundException
+	public Motorista consultar(Motorista m) throws SQLException, ClassNotFoundException
 	{
 		return null;
 	}

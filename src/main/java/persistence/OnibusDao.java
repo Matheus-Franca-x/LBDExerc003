@@ -16,25 +16,25 @@ public class OnibusDao implements ICrud<Onibus>
 	}
 
 	@Override
-	public void cadastrar() throws SQLException, ClassNotFoundException 
+	public void cadastrar(Onibus o) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public void alterar() throws SQLException, ClassNotFoundException
+	public void alterar(Onibus o) throws SQLException, ClassNotFoundException
 	{
 		
 	}
 
 	@Override
-	public void excluir() throws SQLException, ClassNotFoundException 
+	public void excluir(Onibus o) throws SQLException, ClassNotFoundException 
 	{
 		
 	}
 
 	@Override
-	public Onibus consultar() throws SQLException, ClassNotFoundException 
+	public Onibus consultar(Onibus o) throws SQLException, ClassNotFoundException 
 	{
 		return null;
 	}

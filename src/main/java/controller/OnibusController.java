@@ -9,28 +9,42 @@ public class OnibusController implements ICrud<Onibus>
 {
 
 	@Override
-	public void cadastrar() throws SQLException, ClassNotFoundException {
+	public void cadastrar(Onibus o) throws SQLException, ClassNotFoundException 
+	{
 		
 	}
 
 	@Override
-	public void alterar() throws SQLException, ClassNotFoundException {
+	public void alterar(Onibus o) throws SQLException, ClassNotFoundException 
+	{
 		
 	}
 
 	@Override
-	public void excluir() throws SQLException, ClassNotFoundException {
+	public void excluir(Onibus o) throws SQLException, ClassNotFoundException
+	{
 		
 	}
 
 	@Override
-	public Onibus consultar() throws SQLException, ClassNotFoundException {
+	public Onibus buscar(Onibus o) throws SQLException, ClassNotFoundException 
+	{
 		return null;
 	}
 
 	@Override
-	public List<Onibus> list() throws SQLException, ClassNotFoundException {
+	public List<Onibus> listar() throws SQLException, ClassNotFoundException
+	{
 		return null;
+	}
+
+	@Override
+	public boolean validar(String v) 
+	{
+		if(v.strip().equals(""))
+			return true;
+		
+		return false;
 	}
 
 }

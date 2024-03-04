@@ -9,28 +9,42 @@ public class ViagemController implements ICrud<Viagem>
 {
 
 	@Override
-	public void cadastrar() throws SQLException, ClassNotFoundException {
+	public void cadastrar(Viagem v) throws SQLException, ClassNotFoundException
+	{
 		
 	}
 
 	@Override
-	public void alterar() throws SQLException, ClassNotFoundException {
+	public void alterar(Viagem v) throws SQLException, ClassNotFoundException
+	{
 		
 	}
 
 	@Override
-	public void excluir() throws SQLException, ClassNotFoundException {
+	public void excluir(Viagem v) throws SQLException, ClassNotFoundException 
+	{
 		
 	}
 
 	@Override
-	public Viagem consultar() throws SQLException, ClassNotFoundException {
+	public Viagem buscar(Viagem v) throws SQLException, ClassNotFoundException 
+	{
 		return null;
 	}
 
 	@Override
-	public List<Viagem> list() throws SQLException, ClassNotFoundException {
+	public List<Viagem> listar() throws SQLException, ClassNotFoundException 
+	{
 		return null;
+	}
+
+	@Override
+	public boolean validar(String v)
+	{
+		if(v.strip().equals(""))
+			return true;
+		
+		return false;
 	}
 
 }
