@@ -11,9 +11,10 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Motorista 
+public class Onibus 
 {
-	int codigo;
-	String nome;
-	String naturalidade;
+	String placa;
+	String marca;
+	int ano;
+	String descricao;
 }
