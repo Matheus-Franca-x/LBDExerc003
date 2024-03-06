@@ -57,12 +57,14 @@ public class OnibusServlet extends HttpServlet
 		ICrud<Onibus> oControl = new OnibusController();
 		
 		try {
+			todosOnibus = oControl.listar();
 			if(!cmd.contains("Cadastrar") || !cmd.contains("Alterar"))
 			{
 				if(oControl.validar(ano))
 				{
 					saida = "Ano inválido!";
 					request.setAttribute("saida", saida);
+					request.setAttribute("todosOnibus", todosOnibus);
 					RequestDispatcher rd = request.getRequestDispatcher("onibus.jsp");
 					rd.forward(request, response);
 				}
@@ -72,7 +74,6 @@ public class OnibusServlet extends HttpServlet
 				o.setAno(Integer.parseInt(ano));
 				o.setDescricao(descricao);
 			}
-			todosOnibus = oControl.listar();
 			if(cmd.contains("Cadastrar"))
 			{
 				oControl.cadastrar(o);

@@ -64,12 +64,14 @@ public class ViagemServlet extends HttpServlet
 		ICrud<Viagem> vControl = new ViagemController();
 		
 		try {
+			viagens = vControl.listar();
 			if(!cmd.contains("Cadastrar") || !cmd.contains("Alterar"))
 			{
 				if(vControl.validar(codigo))
 				{
 					saida = "Código inválido!";
 					request.setAttribute("saida", saida);
+					request.setAttribute("viagens", viagens);
 					RequestDispatcher rd = request.getRequestDispatcher("viagem.jsp");
 					rd.forward(request, response);
 				}
@@ -77,6 +79,7 @@ public class ViagemServlet extends HttpServlet
 				{
 					saida = "Código de motorista inválido!";
 					request.setAttribute("saida", saida);
+					request.setAttribute("viagens", viagens);
 					RequestDispatcher rd = request.getRequestDispatcher("viagem.jsp");
 					rd.forward(request, response);
 				}
@@ -84,6 +87,7 @@ public class ViagemServlet extends HttpServlet
 				{
 					saida = "Hora de saida inválido!";
 					request.setAttribute("saida", saida);
+					request.setAttribute("viagens", viagens);
 					RequestDispatcher rd = request.getRequestDispatcher("viagem.jsp");
 					rd.forward(request, response);
 				}
@@ -91,6 +95,7 @@ public class ViagemServlet extends HttpServlet
 				{
 					saida = "Hora de chegada inválido!";
 					request.setAttribute("saida", saida);
+					request.setAttribute("viagens", viagens);
 					RequestDispatcher rd = request.getRequestDispatcher("viagem.jsp");
 					rd.forward(request, response);
 				}
@@ -108,7 +113,6 @@ public class ViagemServlet extends HttpServlet
 				v.setPartida(partida);
 				v.setDestino(destino);
 			}
-			viagens = vControl.listar();
 			if(cmd.contains("Cadastrar"))
 			{
 				vControl.cadastrar(v);
