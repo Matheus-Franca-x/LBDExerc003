@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		</nav>
-		<main class="rounded-4 border border-primary form-container m-auto mb-3">
+		<main class="rounded-4 border border-primary form-container m-auto mb-3" style="min-width: 800px;">
 			<form action="viagem" method="post">
 				<div class="form-floating d-flex mb-3">
 					<input type="number" class="form-control input-height" id="floatingInput" placeholder="Codigo" step="1" name="codigo" value='<c:out value="${motorista.codigo}"></c:out>'>
