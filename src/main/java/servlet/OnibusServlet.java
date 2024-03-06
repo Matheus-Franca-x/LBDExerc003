@@ -57,23 +57,23 @@ public class OnibusServlet extends HttpServlet
 		ICrud<Onibus> oControl = new OnibusController();
 		
 		try {
-			todosOnibus = oControl.listar();
 			if(!cmd.contains("Cadastrar") || !cmd.contains("Alterar"))
 			{
-				if(oControl.validar(ano))
+				if(!cmd.contains("Buscar"))
 				{
-					saida = "Ano inválido!";
-					request.setAttribute("saida", saida);
-					request.setAttribute("todosOnibus", todosOnibus);
-					RequestDispatcher rd = request.getRequestDispatcher("onibus.jsp");
-					rd.forward(request, response);
+					if(oControl.validar(ano))
+					{
+						saida = "Ano inválido!";
+						return;
+					}					
+					o.setMarca(marca);
+					o.setAno(Integer.parseInt(ano));
+					o.setDescricao(descricao);
 				}
 				
 				o.setPlaca(placa);
-				o.setMarca(marca);
-				o.setAno(Integer.parseInt(ano));
-				o.setDescricao(descricao);
 			}
+			
 			if(cmd.contains("Cadastrar"))
 			{
 				oControl.cadastrar(o);
@@ -96,10 +96,19 @@ public class OnibusServlet extends HttpServlet
 			{
 				o = oControl.buscar(o);
 			}
+			
+			todosOnibus = oControl.listar();
+			
 		} catch (SQLException | ClassNotFoundException | NumberFormatException e)
 		{
 			erro = e.getMessage();
 		} finally {
+			try {
+				todosOnibus = oControl.listar();
+			} catch (SQLException | ClassNotFoundException e) {
+				erro = e.getMessage();
+			}
+			
 			request.setAttribute("saida", saida);
 			request.setAttribute("erro", erro);
 			request.setAttribute("onibus", o);

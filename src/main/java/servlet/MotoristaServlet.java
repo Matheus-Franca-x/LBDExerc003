@@ -58,16 +58,12 @@ public class MotoristaServlet extends HttpServlet
 		ICrud<Motorista> mControl = new MotoristaController();
 		
 		try {
-			motoristas = mControl.listar();
 			if(!cmd.contains("Cadastrar") || !cmd.contains("Alterar"))
 			{
 				if(mControl.validar(codigo))
 				{
 					saida = "Código inválido!";
-					request.setAttribute("saida", saida);
-					request.setAttribute("motoristas", motoristas);
-					RequestDispatcher rd = request.getRequestDispatcher("motorista.jsp");
-					rd.forward(request, response);
+					return;
 				}
 				
 				m.setCodigo(Integer.parseInt(codigo));
@@ -100,6 +96,12 @@ public class MotoristaServlet extends HttpServlet
 		{
 			erro = e.getMessage();
 		} finally {
+			try {
+				motoristas = mControl.listar();
+			} catch (SQLException | ClassNotFoundException e) {
+				erro = e.getMessage();
+			}
+			
 			request.setAttribute("saida", saida);
 			request.setAttribute("erro", erro);
 			request.setAttribute("motorista", m);
