@@ -9,5 +9,5 @@ public interface ICrud<T>
 	void alterar(T t) throws SQLException, ClassNotFoundException;
 	void excluir(T t) throws SQLException, ClassNotFoundException;
 	T consultar(T t) throws SQLException, ClassNotFoundException;
-	List<T> list() throws SQLException, ClassNotFoundException;
+	List<T> listar() throws SQLException, ClassNotFoundException;
 }

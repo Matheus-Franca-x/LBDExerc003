@@ -124,7 +124,7 @@ public class ViagemDao implements ICrud<Viagem>
 	}
 
 	@Override
-	public List<Viagem> list() throws SQLException, ClassNotFoundException 
+	public List<Viagem> listar() throws SQLException, ClassNotFoundException 
 	{
 		List<Viagem> viagens = new ArrayList<Viagem>();
 		Connection c = gDao.getConnection();

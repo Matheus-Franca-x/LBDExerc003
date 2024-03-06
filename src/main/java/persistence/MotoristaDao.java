@@ -82,7 +82,7 @@ public class MotoristaDao implements ICrud<Motorista>
 	}
 
 	@Override
-	public List<Motorista> list() throws SQLException, ClassNotFoundException
+	public List<Motorista> listar() throws SQLException, ClassNotFoundException
 	{
 		List<Motorista> motoristas = new ArrayList<Motorista>();
 		Connection c = gDao.getConnection();

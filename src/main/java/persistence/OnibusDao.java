@@ -86,7 +86,7 @@ public class OnibusDao implements ICrud<Onibus>
 	}
 
 	@Override
-	public List<Onibus> list() throws SQLException, ClassNotFoundException 
+	public List<Onibus> listar() throws SQLException, ClassNotFoundException 
 	{
 		List<Onibus> todosOnibus = new ArrayList<Onibus>();
 		Connection c = gDao.getConnection();
